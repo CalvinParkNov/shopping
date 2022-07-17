@@ -20,6 +20,8 @@ app.use(express.json());
 //root for main page
 app.get("/", (req, res) => {
   res.send('<h1>Store API</h1><a href="/api/v1/products"> products route</a>');
+  // res.write("<script>alert('sucess')</script>");
+  // res.write("<script>window.location='/api/v1/products'</script>");
 });
 
 app.use("/api/v1/products", productsRouter);
